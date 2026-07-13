@@ -25,7 +25,6 @@ public class Main {
         if (args.length < 2) {
             System.out.println("Usage: java Main <array elements> <target value>");
             System.out.println("Example: java Main 1 2 3 4 5 5");
-            System.out.println("Run without arguments to print: hello");
             return;
         }
         int[] arr = new int[args.length - 1];
