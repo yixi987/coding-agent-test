@@ -1,6 +1,11 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
+    private static void printUsage() {
+        System.out.println("Usage: java Main <array elements> <target value>");
+        System.out.println("Example: java Main 1 2 3 4 5 5");
+    }
+
     // Buggy binary search implementation
     public static int binarySearch(int[] arr, int b) {
         int i = 0, j = arr.length - 1;
@@ -20,13 +25,11 @@ public class Main {
     public static void main(String[] args) {
         if (args.length == 0) {
             System.out.println("hello");
-            System.out.println("Usage: java Main <array elements> <target value>");
-            System.out.println("Example: java Main 1 2 3 4 5 5");
+            printUsage();
             return;
         }
         if (args.length < 2) {
-            System.out.println("Usage: java Main <array elements> <target value>");
-            System.out.println("Example: java Main 1 2 3 4 5 5");
+            printUsage();
             return;
         }
         int[] arr = new int[args.length - 1];
