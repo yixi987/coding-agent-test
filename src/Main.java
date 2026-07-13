@@ -20,6 +20,8 @@ public class Main {
     public static void main(String[] args) {
         if (args.length == 0) {
             System.out.println("hello");
+            System.out.println("Usage: java Main <array elements> <target value>");
+            System.out.println("Example: java Main 1 2 3 4 5 5");
             return;
         }
         if (args.length < 2) {
