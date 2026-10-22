@@ -2,16 +2,16 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     // Buggy binary search implementation
-    public static int binarySearch(int[] arr, int b) {
+    public static int binarySearch(int[] arr, int target) {
         int i = 0, j = arr.length - 1;
-        while (i < j) { // Bug: should
-            int a = i + (j - i) / 2;
-            if (arr[a] == b) {
-                return a;
-            } else if (arr[a] < b) {
-                i = a + 1;
+        while (i <= j) {
+            int mid = i + (j - i) / 2;
+            if (arr[mid] == target) {
+                return mid;
+            } else if (arr[mid] < target) {
+                i = mid + 1;
             } else {
-                j = a - 1;
+                j = mid - 1;
             }
         }
         return -1;
